@@ -7,7 +7,8 @@ $(document).ready(function() {
   var strongs = $('strong');
   for (var i = 0; i < strongs.length; i++) {
     if (blacklist.indexOf(strongs[i].innerText) >= 0) {
-      var t = strongs[i].parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
+      var t = strongs[i].parentNode.parentNode.parentNode.parentNode
+              .parentNode.parentNode.parentNode.parentNode.parentNode;
       t.style.backgroundColor = '#202020';
     }
   }

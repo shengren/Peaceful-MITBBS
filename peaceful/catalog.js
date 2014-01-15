@@ -1,22 +1,4 @@
-var blacklist = [
-  'laoselang',
-  'churchill',
-  'ElectricBro',
-  'StephenKing',
-  'yangweiqun',
-  'AAman',
-  'laohuangniu',
-  'Stevenson',
-  'jamesgordon',
-  'hznz',
-  'geniushanb',
-  'HOTDELL',
-  'venomous',
-  'kainasdaq',
-];
-
-chrome.storage.local.set({'blacklist': blacklist});
-
+var blacklist = [];
 chrome.storage.local.get('blacklist', function(result) {
   blacklist = result.blacklist;
 });
