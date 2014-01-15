@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "Peaceful MITBBS",
+  "version": "1.0",
+
+  "permissions": [
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.mitbbs.com/article/*.html",
+        "http://www.mitbbs.com/article_t/*.html",
+        "http://www.mitbbs.com/article_t1/*.html"
+      ],
+      "js": ["jquery-1.10.2.min.js", "article.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "http://www.mitbbs.com/bbsdoc/*.html",
+        "http://www.mitbbs.com/bbsdoc1/*.html"
+      ],
+      "js": ["jquery-1.10.2.min.js", "catalog.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}
